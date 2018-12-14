@@ -1,0 +1,16 @@
+$base-font-size: 16px;
+
+@import url('https://fonts.googleapis.com/css?family=Courgette|Lora');
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Courgette', cursive;
+}
+body {
+  font-family: 'Lora', sans-serif;
+} 
+
+.text-shadow{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+.font-lora{
+  font-family: 'Lora', sans-serif;
+}

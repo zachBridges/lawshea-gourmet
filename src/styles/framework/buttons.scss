@@ -1,0 +1,15 @@
+.button{
+  background-color: $lawshea-red;
+  font-size: 1.25rem;
+  i{
+    margin-left: 1rem;
+    position: relative;
+    top: 2px;
+  }
+  @include breakpoint(small only) {
+    font-size: 1rem;
+  }
+  &:hover, &:focus{
+    background-color: $lawshea-red-dull;
+  }
+}

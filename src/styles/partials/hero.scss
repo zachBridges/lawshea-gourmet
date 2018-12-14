@@ -1,0 +1,42 @@
+.hero-content{
+  background-attachment: fixed;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @include breakpoint(medium only) {
+    padding: 5rem;
+  }
+  @include breakpoint(small only) {
+    background-attachment: initial;
+    padding: 2rem 1rem;
+  }
+}
+  .hero-video{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 9;
+
+    @include breakpoint(medium) {
+      max-height: 480px;
+    }
+    @include breakpoint(large) {
+      max-height: 720px;
+    }
+  }
+  .hero-logo{
+    position: relative;
+    z-index: 10;
+  }
+.hero-subtitle{
+  color: $lawshea-red;
+  margin-bottom: 0;
+  padding: 3rem 0;
+}

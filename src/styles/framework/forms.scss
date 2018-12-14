@@ -1,0 +1,10 @@
+.form-error{
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 0.333rem;
+}
+i.fa-exclamation-triangle{
+  color: get-color(alert);
+  display: inline;
+  margin-right: 0.5rem; 
+}

@@ -1,0 +1,45 @@
+.color-red{
+  color: $lawshea-red !important;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.position-center-xy{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+
+
+$hr-base-unit: 25px;
+hr.flare {
+  height: $hr-base-unit;
+  border-style: ridge;
+  border-color: $lawshea-red-dull;
+  border-width: 2px 0 0 0;
+  border-radius: 45px;
+  margin: 0.3em auto;
+  width: 5rem;
+}
+hr.flare:before {
+    display: block;
+    content: "";
+    height: $hr-base-unit;
+    margin-top: -$hr-base-unit+1;
+    border-style: ridge;
+    border-color: $lawshea-red-dull;
+    border-width: 0 0 2px 0;
+    border-radius: 45px;
+}
+hr.flare.mod-wide{
+  margin: 3rem auto;
+  width: 50%;
+}

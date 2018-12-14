@@ -1,0 +1,70 @@
+.about-hero{
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 900px;
+  padding: 11rem 2rem 0 0;
+  position: relative;
+  text-align: right;
+  *{
+    color: white;
+  }
+  @include breakpoint(medium only) {
+    background-position: center;
+  }
+}
+  .about-hero-copy.large-up{
+    position: absolute;
+    right: 2rem;
+    max-width: 500px;
+  } 
+  .about-hero-subheadline{
+    @extend .font-lora;
+    margin-bottom: 2rem;
+    position: relative;
+    @include breakpoint(large up) {
+      right: -1.3rem;
+    }
+    i.fas {
+      color: $lawshea-red;
+      font-size: 0.666rem;
+      position: relative;
+      @include breakpoint(large up) {
+        position: absolute;  
+      }
+      
+      &.fa-quote-left{
+        left: 0;
+        top: 0rem;
+        
+      }
+      &.fa-quote-right{
+        bottom: 0;
+        @include breakpoint(large up) {
+          right: -1.3rem;
+        }
+        
+      }
+    }
+  }
+  .about-hero-body{
+    color: black;
+    text-shadow: 1px 1px 8px white;
+    strong{
+      color: black;
+    }
+  }
+
+  .about-hero-body .first-letter{
+    color: black;
+    @include breakpoint(small only) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .contact-chef{
+    text-decoration: underline;
+    text-shadow: none;
+  }

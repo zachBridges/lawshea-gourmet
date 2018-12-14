@@ -1,0 +1,60 @@
+.section-menu{
+  padding-top: 0;
+}
+.menu-hero{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+  height: 600px;
+  position: relative;
+  width: 100%;
+  @include breakpoint(medium only) {
+    height: 500px;
+    padding: 100px 1rem 3rem 1rem;
+  }
+  @include breakpoint(small only) {
+    height: 200px;
+    padding: 100px 1rem 3rem 1rem;
+  }
+  .menu-hero-title{
+    color: white;
+    position: absolute;
+  }
+}
+  .menu-fundamentals{
+    padding: 6rem 0;
+    .menu-fundamental{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // border: 1rem solid white;
+      // border-radius: 50%;
+      min-height: 300px;
+      position: relative;
+      span{
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 900;
+        padding: 1rem;
+        position: absolute;
+        text-shadow: 3px 2px 6px black;
+        @include breakpoint(medium only) {
+          font-size: 1.4rem;
+        }
+        @include breakpoint(small only) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .menu-container{
+    table{ 
+      margin: 0 auto;
+      max-width: 767px;
+    }
+  }
+
+  .menu-category{
+    color: $lawshea-red;
+  }

@@ -1,0 +1,74 @@
+// --- CALCULATE FONT SIZE --- //
+@function calcEms($size, $base-size: $base_font_size) {
+	@return $size / $base-size * 1em;
+}
+
+@function calcRems($size, $base-size: $base_font_size) {
+	@return $size / $base-size * 1rem;
+}
+
+@mixin equalHeightWidth($dimension) {
+	height: $dimension;
+	width: $dimension;
+}
+
+@mixin border_radius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin trans($params...) {
+	-webkit-transition: $params;
+	-moz-transition: $params;
+	-ms-transition: $params;
+	transition: $params;
+}
+
+@mixin boxSize($param: border-box) {
+	-moz-box-sizing: $param;
+	-webkit-box-sizing: $param;
+	box-sizing: $param;
+}
+
+@mixin gradient($color1, $color2) {
+	background: $color1; /* Old browsers */
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color1), color-stop(100%, $color2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color1 0%, $color2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color1 0%, $color2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color1 0%, $color2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color1 0%, $color2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2', GradientType=0); /* IE6-8 */
+}
+
+@mixin gradientTwoColor($color1, $color2) {
+	background: $color1;
+	background: linear-gradient(to bottom, $color1 0%, $color1 49%, $color2 51%, $color2 100%);
+}
+
+// Stroke font-character
+/// @param {Integer} $stroke - Stroke width
+/// @param {Color} $color - Stroke color
+/// @return {List} - text-shadow list
+@function stroke($stroke: 1px, $color: black) {
+	$shadow: ();
+	$from: $stroke*-1;
+	@for $i from $from through $stroke {
+		@for $j from $from through $stroke {
+			$shadow: append($shadow, $i * 1px $j * 1px 0 $color, comma);
+		}
+	}
+	@return $shadow;
+}
+
+@function calcVw($target, $viewport-width: 1440) {
+	$vw-context: ($viewport-width * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
